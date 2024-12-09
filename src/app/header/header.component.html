@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  <div>Todo List</div>
+  <div class="navRightButton">
+    <button
+      mat-icon-button
+      [matMenuTriggerFor]="appMenu"
+      aria-label="Example icon-button with a menu"
+    >
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #appMenu="matMenu">
+      <button met-menu-item (click)="navigate('')">
+        <mat-icon>list</mat-icon>Todo List
+      </button>
+      <button met-menu-item (click)="navigate('about')">
+        <mat-icon>info</mat-icon>About
+      </button>
+    </mat-menu>
+  </div>
+</mat-toolbar>
